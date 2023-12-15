@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0009_gamecart'),
+        ("web", "0009_gamecart"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='gamecart',
-            new_name='gamecartsection',
+            old_name="gamecart",
+            new_name="gamecartsection",
         ),
     ]

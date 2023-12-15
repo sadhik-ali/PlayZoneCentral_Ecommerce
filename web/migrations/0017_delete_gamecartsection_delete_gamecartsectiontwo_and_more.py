@@ -4,21 +4,20 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0016_delete_productbannerfirst_delete_productbannersecond_and_more'),
+        ("web", "0016_delete_productbannerfirst_delete_productbannersecond_and_more"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='gamecartsection',
+            name="gamecartsection",
         ),
         migrations.DeleteModel(
-            name='gamecartsectiontwo',
+            name="gamecartsectiontwo",
         ),
         migrations.AlterField(
-            model_name='category',
-            name='name',
+            model_name="category",
+            name="name",
             field=models.CharField(max_length=200),
         ),
     ]

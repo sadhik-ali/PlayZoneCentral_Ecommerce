@@ -4,70 +4,69 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0011_gamecartsectiontwo'),
+        ("web", "0011_gamecartsectiontwo"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='firstsectionproduct',
-            old_name='ProductImage',
-            new_name='image',
+            model_name="firstsectionproduct",
+            old_name="ProductImage",
+            new_name="image",
         ),
         migrations.RenameField(
-            model_name='firstsectionproduct',
-            old_name='ProductName',
-            new_name='name',
+            model_name="firstsectionproduct",
+            old_name="ProductName",
+            new_name="name",
         ),
         migrations.RenameField(
-            model_name='firstsectionproduct',
-            old_name='ProductPrice',
-            new_name='price',
+            model_name="firstsectionproduct",
+            old_name="ProductPrice",
+            new_name="price",
         ),
         migrations.RenameField(
-            model_name='fourthsectionproduct',
-            old_name='ProductImage',
-            new_name='image',
+            model_name="fourthsectionproduct",
+            old_name="ProductImage",
+            new_name="image",
         ),
         migrations.RenameField(
-            model_name='fourthsectionproduct',
-            old_name='ProductName',
-            new_name='name',
+            model_name="fourthsectionproduct",
+            old_name="ProductName",
+            new_name="name",
         ),
         migrations.RenameField(
-            model_name='fourthsectionproduct',
-            old_name='ProductPrice',
-            new_name='price',
+            model_name="fourthsectionproduct",
+            old_name="ProductPrice",
+            new_name="price",
         ),
         migrations.RenameField(
-            model_name='secondsectionproduct',
-            old_name='ProductImage',
-            new_name='image',
+            model_name="secondsectionproduct",
+            old_name="ProductImage",
+            new_name="image",
         ),
         migrations.RenameField(
-            model_name='secondsectionproduct',
-            old_name='ProductName',
-            new_name='name',
+            model_name="secondsectionproduct",
+            old_name="ProductName",
+            new_name="name",
         ),
         migrations.RenameField(
-            model_name='secondsectionproduct',
-            old_name='ProductPrice',
-            new_name='price',
+            model_name="secondsectionproduct",
+            old_name="ProductPrice",
+            new_name="price",
         ),
         migrations.RenameField(
-            model_name='thirdsectionproduct',
-            old_name='ProductImage',
-            new_name='image',
+            model_name="thirdsectionproduct",
+            old_name="ProductImage",
+            new_name="image",
         ),
         migrations.RenameField(
-            model_name='thirdsectionproduct',
-            old_name='ProductName',
-            new_name='name',
+            model_name="thirdsectionproduct",
+            old_name="ProductName",
+            new_name="name",
         ),
         migrations.RenameField(
-            model_name='thirdsectionproduct',
-            old_name='ProductPrice',
-            new_name='price',
+            model_name="thirdsectionproduct",
+            old_name="ProductPrice",
+            new_name="price",
         ),
     ]

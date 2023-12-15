@@ -4,19 +4,26 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0001_initial'),
+        ("web", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='SecondSectionProduct',
+            name="SecondSectionProduct",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('ProductImage', models.ImageField(upload_to='media')),
-                ('ProductName', models.CharField(max_length=100)),
-                ('ProductPrice', models.CharField(max_length=100)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("ProductImage", models.ImageField(upload_to="media")),
+                ("ProductName", models.CharField(max_length=100)),
+                ("ProductPrice", models.CharField(max_length=100)),
             ],
         ),
     ]

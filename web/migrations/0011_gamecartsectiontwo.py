@@ -4,19 +4,26 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0010_rename_gamecart_gamecartsection'),
+        ("web", "0010_rename_gamecart_gamecartsection"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='gamecartsectiontwo',
+            name="gamecartsectiontwo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='media')),
-                ('name', models.CharField(max_length=50)),
-                ('price', models.IntegerField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="media")),
+                ("name", models.CharField(max_length=50)),
+                ("price", models.IntegerField()),
             ],
         ),
     ]

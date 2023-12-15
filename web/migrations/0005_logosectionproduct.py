@@ -4,17 +4,24 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0004_thirdsectionproduct'),
+        ("web", "0004_thirdsectionproduct"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='LogoSectionProduct',
+            name="LogoSectionProduct",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('LogoImage', models.ImageField(upload_to='media')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("LogoImage", models.ImageField(upload_to="media")),
             ],
         ),
     ]

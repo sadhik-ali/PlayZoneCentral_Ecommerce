@@ -4,21 +4,20 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0006_productbannerfirst_productbannersecond'),
+        ("web", "0006_productbannerfirst_productbannersecond"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='productbannerfirst',
-            name='FirstTitle',
+            model_name="productbannerfirst",
+            name="FirstTitle",
             field=models.CharField(default=1, max_length=100),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='productbannerfirst',
-            name='SecondTitle',
+            model_name="productbannerfirst",
+            name="SecondTitle",
             field=models.CharField(default=1, max_length=100),
             preserve_default=False,
         ),

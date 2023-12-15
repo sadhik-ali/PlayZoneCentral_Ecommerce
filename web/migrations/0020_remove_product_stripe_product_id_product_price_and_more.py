@@ -4,23 +4,22 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0019_price_remove_product_price_product_stripe_product_id_and_more'),
+        ("web", "0019_price_remove_product_price_product_stripe_product_id_and_more"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='product',
-            name='stripe_product_id',
+            model_name="product",
+            name="stripe_product_id",
         ),
         migrations.AddField(
-            model_name='product',
-            name='price',
+            model_name="product",
+            name="price",
             field=models.IntegerField(default=1),
             preserve_default=False,
         ),
         migrations.DeleteModel(
-            name='Price',
+            name="Price",
         ),
     ]

@@ -4,21 +4,20 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0015_alter_product_category'),
+        ("web", "0015_alter_product_category"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='ProductBannerFirst',
+            name="ProductBannerFirst",
         ),
         migrations.DeleteModel(
-            name='ProductBannerSecond',
+            name="ProductBannerSecond",
         ),
         migrations.AddField(
-            model_name='category',
-            name='display_in_home',
+            model_name="category",
+            name="display_in_home",
             field=models.BooleanField(default=False),
         ),
     ]
