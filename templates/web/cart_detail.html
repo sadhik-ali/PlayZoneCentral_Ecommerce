@@ -1,0 +1,113 @@
+{% extends "web/base.html" %}
+
+{% load static %}
+
+{% load cart_tag %}
+
+{% block content %}
+
+
+    <!--section start-->
+    <section class="cart-section section-b-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="cart_counter">
+                        <div class="countdownholder">
+                            Your cart will be expired in<span id="timer"></span> minutes!
+                        </div>
+                        <a href="checkout.html" class="cart_checkout btn btn-solid btn-xs">check out</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 table-responsive-xs">
+                    <table class="table cart-table">
+                        <thead>
+                            <tr class="table-head">
+                                <th scope="col">image</th>
+                                <th scope="col">product name</th>
+                                <th scope="col">price</th>
+                                <th scope="col">quantity</th>
+                               
+                                <th scope="col">total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for key,value in request.session.cart.items %}
+                            <tr>
+                                <td>
+                                    <a href="#"><img src="{{value.image}}" alt=""></a>
+                                </td>
+                                <td><a href="#">{{value.name}}</a>
+                                    <div class="mobile-cart-content row">
+                                        <div class="col">
+                                            <div class="qty-box">
+                                                <div class="input-group">
+                                                    <input type="text" name="quantity" class="form-control input-number"
+                                                        value="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h2 class="td-color">{{value.price}}</h2>
+                                        </div>
+                                        <div class="col">
+                                            <h2 class="td-color"><a href="#" class="icon"><i class="ti-close"></i></a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h2>{{value.price}}</h2>
+                                </td>
+                                <td class="product-quantity" style="width: 10px; text-align: center;">
+                                    <a href="{% url 'item_increment' value.product_id %}" class='cart_quantity_up'>+</a>
+                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="{{value.quantity}}" />
+                                    </div>
+                                    <a href="{% url 'item_decrement' value.product_id %}" class='cart_quantity_down'>-</a>
+                                </td>
+                              
+                                <td>
+                                    <h2 class="td-color">{{value.price}}</h2>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                       
+                        
+                    </table>
+                    <div class="table-responsive-md">
+                        <table class="table cart-table ">
+                            <tfoot>
+                                <tr>
+                                    <td>total price :</td>
+                                    <td>
+                                        <h2>{{cart_total_amount}}</h2>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="row cart-buttons">
+                <div class="col-6"><a href="{% url 'cart_clear' %}" class="btn btn-solid">Clear Cart</a></div>
+                <div class="col-6 ">
+                <form action="{% url 'create-checkout-session' %}  " method="POST">
+                
+                        {% csrf_token %}
+                        <button type="submit" class="btn-solid btn">Checkout</button>
+               
+            </form>
+        </div>
+            </div>
+        </div>
+    </section>
+    <!--section end-->
+
+
+
+
+    {% endblock %}
